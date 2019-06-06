@@ -13,7 +13,7 @@ after_success:
   - docker build -t dmytrokyiashko/multi-nginx ./nginx
   - docker build -t dmytrokyiashko/multi-server ./server
   - docker build -t dmytrokyiashko/multi-worker ./worker
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --pasword-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push dmytrokyiashko/multi-client
   - docker push dmytrokyiashko/multi-nginx
   - docker push dmytrokyiashko/multi-server
